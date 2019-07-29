@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>My web page for learning purposes</title>
+</head>
+<body>
+<h1>URLs</h1>
+<h5>URL - Uniform Resource Locator</h5>
+<p>Example of an URL </p>
+<a title="protocol" style=color:#008000>http</a>://<a title="host" style=color:#ff0000>www.udacity.com</a><a title="path" style=color:#800080>/path</a>
+
+<h5>Ports</h5>
+Port is a always present in the request and allows to target different parts of the host.<br>
+Default port is ":80" and might not be specified in URL.
+<p>http://localhost<a title="custom port" style=color:#0072bb>:8000</a>/</p>
+
+<h5>Query parameters (GET parameters)</h5>
+A GET parameter always comes after the path and has a following structure <a title="get query structure" style=color:#0072bb>name=value</a><br>
+Multiple GET parameters in a single URL are separated by "&" sign <a title="complex get query structure" style=color:#0072bb>name=value&name1=value1</a>
+<p>http://example.com/foo<a title="complex get query exaple" style=color:#0072bb>?p=1&q=neat</a>
+
+<h5>Fragments</h5>
+Fragments are used to reference a particular part of the page we are looking at<br>
+Fragments are not being sent to the server along with the request and exist only in the browser<br>
+Fragments follow the query parameters and come last
+<p>http://example.com/foo?p=1&q=neat<a title="fragment" style=color:#0072bb>#fragment</a>
+
+<h3>HTTP requests and responses</h3>
+HTTP - the main protocol of the web and stands for <br>
+HyperText Transfer Protocol
+
+<h5>HTTP Requests</h5>
+When we make a GET request to the server, request line follows the URL
+<p title="URL" style=color:#0072bb>http://example.com/foo</p>
+<table>
+<tr>
+    <td title="method" style=color:#008000>GET</td>
+    <td title="path" style=color:#800080>/foo</td>
+    <td title="version" style=color:#ff0000>HTTP/1.1</td>
+  </tr>
+  <tr>
+    <td>method</td>
+    <td>path</td>
+    <td>version</td>
+  </tr>
+ </table>
+
+ A typical HTTP request contains Headers. They have the following structure <a title="request header structure" style=color:#0072bb>name:value</a><br>
+ Two mandatory headers are Host and User-Agent
+ <p title="version" style=color:#ff0000>Host: www.example.com<br>
+ User-Agent: chrome v.75</p>
+
+
+ <h5>HTTP Responses</h5>
+ HTTP response is what the requesting party gets in a response to the request. In case of a successful request the server returns a file.<br>
+ The most common response to our example request of  <a title="request example" style=color:#0072bb>GET /foo HTTP/1.1</a>
+ would be <a title="good response example" style=color:#0072bb>HTTP/1.1</a> <a title="status code" style=color:#008000>200</a><a title="reason phrase" style=color:#ff0000> OK</a>
+<p>The most commonly used status codes
+<table>
+<tr>
+    <td>200 OK</td>
+    <td>Success</td>
+</tr>
+<tr>
+    <td>302 Found</td>
+    <td>The file is on the server but located somewhere else</td>
+</tr>
+<tr>
+    <td>404 Not found</td>
+    <td>There's no such document under specified path</td>
+</tr>
+<tr>
+    <td>500 Server error</td>
+    <td>The server broke trying to handle your request</td>
+</tr>
+ </table>
+<a href=https://www.restapitutorial.com/httpstatuscodes.html target="blank"> For more info on HTTP Status Codes </a>
+
+<p>Typical resonse headers look like this:<br>
+HTTP/1.1 200 OK<br>
+<a style=color:#ff0000> Date: Sun Jul 21 2019 15:14:55<br>
+Server: Apache/2.2.3<br>
+Content-Type: text/html (or image/png, or other)<br>
+Content-Length: 1539</a>
+
+<h3>Servers</h3>
+The main purpose of a server on the Internet is to respond to HTTP requests by senting content.<br>
+There are 2 types of content:<br>
+1) Static - pre-written file<br>
+2) Dynamic - files generated on the fly<br>
+
+<p>. </p>
+<p> .</p>
+<p>. </p>
+</body>
+</html>
